@@ -1,0 +1,156 @@
+<div class="row">
+
+    <div class="col-md-1" style="display: flex; align-items: center; position: relative; left: 15px;">
+        <mat-icon>donut_large</mat-icon>
+    </div>
+    <div class="col-md-8">
+
+        <button mat-icon-button>
+            <mat-icon (click)="sidenav.toggle();">menu</mat-icon>
+        </button>
+    </div>
+
+    <div class="col-md-3" style="display: flex; justify-content: center; align-items: center;">
+        <button style="background-color: transparent;"> <i class="fas fa-bell"></i></button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-user-alt"></i> &nbsp;&nbsp;{{name}}
+    </div>
+
+
+</div>
+
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+        <mat-sidenav-container>
+            <h3>ff</h3>
+            <mat-sidenav #sidenav opened="true" mode="side">
+                <mat-nav-list>
+                    <a mat-list-item><span class="material-icons md-18">dashboard</span></a>
+                    <a mat-list-item><span class="fas fa-database"></span></a>
+                    <a mat-list-item>
+                        <mat-icon>insert_drive_file</mat-icon>
+                    </a>
+                    <a mat-list-item>
+                        <mat-icon>access_time</mat-icon>
+                    </a>
+                    <a mat-list-item>
+                        <mat-icon>person_ouline</mat-icon>
+                    </a>
+
+                </mat-nav-list>
+            </mat-sidenav>
+            <mat-sidenav-content>
+                <div style="height: 88vh;"></div>
+            </mat-sidenav-content>
+
+
+        </mat-sidenav-container>
+    </mat-drawer>
+    <mat-drawer-content>
+        <div class="label">
+            <h2>Organizations Gigs</h2>
+            <h4 class="text-muted">Manage you organization gigs here</h4>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card1">
+                    <mat-card>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="cardData">
+                                    <div><a href="">All</a></div>
+                                    <div><a href="">Open</a></div>
+                                    <div><a href="">Completed</a></div>
+                                    <div><a href="">Cancelled</a></div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <div class="cardData">
+                                    <div class="select">
+                                        <mat-form-field appearance="outline">
+                                            <mat-label>Sort By</mat-label>
+                                            <mat-select>
+                                                <mat-option value="option1">Option 1</mat-option>
+                                                <mat-option value="option2">Option 2</mat-option>
+                                                <mat-option value="option3">Option 3</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div>
+                                        <form class="d-flex">
+                                            <input class="form-control me-2" type="search" placeholder="Search"
+                                                aria-label="Search">
+                                            <mat-icon>search</mat-icon>&nbsp;&nbsp;
+                                            <i class="fas fa-bars"></i>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </mat-card>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 mt-5">
+                <div class="card2">
+                    <mat-card>
+                        <div class="cardData2">
+                            <mat-card class="position" *ngFor="let data of gigsData">
+                                <div class="cardValues">
+                                    <div class="row">
+                                        <div class="col-md-2 icons">
+                                            
+
+                                            
+                                        </div>
+                                        <div class="col-md-12">
+                                            <i class="far fa-user"></i>
+                                            &nbsp;<span class="text-muted">Gig Name</span><br>
+                                            <p style="margin-left: 19px; color: rgb(82, 82, 173);"> {{data.userName}}</p>
+                                            <i class="fas fa-calendar-day"></i>
+                                            &nbsp; <span class="text-muted">Required Date</span><br>
+                                            <p style="margin-left: 21px; color: rgb(82, 82, 173);">{{data.date}}</p>
+                                            <i class="fas fa-funnel-dollar"></i>
+                                            &nbsp;<span class="text-muted">Total Budget</span><br>
+                                            <p style="margin-left: 24px; color: rgb(82, 82, 173);">{{data.budget}}</p>
+                                            <div class="secured">
+                                                <span style="color: rgb(82, 82, 173); "><b>100% Secured</b></span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <mat-progress-bar mode="determinate" value="100" color="warn"></mat-progress-bar>
+
+                                    <div class="secured">
+                                        <span style="color: rgb(82, 82, 173); "><b>Total Resources</b></span>
+                                    </div>
+                                    
+                                    <div class="finaldata">
+                                        <div><span style="color: rgb(82, 82, 173); ">Required</span></div><br>
+
+                                        <div style="color: rgb(82, 82, 173); ">Hired</div><br>
+
+                                        <div style="color: rgb(82, 82, 173); ">Applicants</div>
+
+                                    </div>
+                                    <div class="datas">
+                                        <div><span style="color: rgb(82, 82, 173); ">1</span></div>
+                                        <span style="color: rgb(82, 82, 173); ">1</span>
+                                        <span style="color: rgb(82, 82, 173); ">1</span>
+                                    </div>
+                                </div>
+                            </mat-card>
+                            
+                        </div>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>

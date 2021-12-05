@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.example-container {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .label{
+      margin: 40px;
+  }
+
+  .card1{
+      margin-left: 40px;
+      margin-right: 40px;
+      
+  }
+  .col-md-4 .cardData{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  }
+  .cardData a{
+      text-decoration: none;
+      color:black;
+  }
+  .cardData a:hover{
+     
+     border-bottom:4px solid yellow
+  }
+
+  .card2{
+    margin-left: 40px;
+    margin-right: 40px; 
+    
+    
+  }
+
+  .cardData2{
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      cursor: pointer;
+      width: 100%;
+  }
+
+  .cardValues{
+      width: 350px;
+      height: 300px;
+      margin: 10px;
+  }
+
+  @media (max-width:700px){
+      .cardValues{
+          width: 240px;
+      }
+  }
+  
+  .position{
+      margin: 15px;
+  }
+  .secured{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .finaldata{
+      display: flex;
+      justify-content: space-around;
+  }
+
+  .datas{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  }
+
+  .icons{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  /* .ico1{
+      position: relative;
+      top: 10px;
+  }
+  .ico2{
+    position: relative;
+    top: 30px;
+}
+.ico3{
+    position: relative;
+    top: 40px;
+} */
